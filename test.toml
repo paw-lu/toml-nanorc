@@ -1,0 +1,82 @@
+# This is a TOML document.
+# It (partially) is from https://github.com/toml-lang/toml
+
+title = "TOML Example"
+
+[owner]
+name = "Tom Preston-Werner"
+dob = 1979-05-27T07:32:00-08:00 # First class dates
+
+[database]
+server = "192.168.1.1"
+ports = [ 8001, 8001, 8002 ]
+connection_max = 5000
+enabled = true
+
+[servers]
+
+  # Indentation (tabs and/or spaces) is allowed but not required
+  [servers.alpha]
+  ip = "10.0.0.1"
+  dc = "eqdc10"
+
+  [servers.beta]
+  ip = "10.0.0.2"
+  dc = "eqdc10"
+
+[clients]
+data = [ ["gamma", "delta"], [1, 2] ]
+
+# Line breaks are OK when inside arrays
+hosts = [
+  "alpha",
+  "omega"
+]
+
+= "keyless value"
+# Trailing whitespace  
+
+numbers = [
+1,
+1.23,
+1.234567e3,
+1.234567E+5,
+1.23456789e-5,
+1_2_3_4_5.6_7_8e9_0,
+-69,
+123210130210312031,
+069, # Leading zero
+e1 # Invalid exponent (still highlighted for some reason)
+]
+
+# Invalid table names
+[]
+[a.]
+[a..b]
+[.b]
+[.]
+
+# Array of tables
+[[products]]
+name = "Hammer"
+sku = 738594937
+
+[[products]]
+
+[[products]]
+name = "Nail"
+sku = 284758393
+color = "gray"
+
+invalid_table_name_in_string = "[[invalid.table..name]]"
+invalid_strings = [
+"\\\\"",
+"\\\",
+"\"
+]
+
+string_block = """
+string block
+more string
+more string
+"""
