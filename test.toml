@@ -36,6 +36,8 @@ hosts = [
 = "keyless value"
 # Trailing whitespace  
 
+[true.mistake] # Oops
+
 numbers = [
 1,
 1.23,
