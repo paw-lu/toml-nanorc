@@ -5,8 +5,10 @@ nanorc highlighting for TOML (https://github.com/toml-lang/toml)
 1. Copy `toml.nanorc` to `/usr/share/nano/`
 2. Open `/etc/nanorc`
 3. If you can't find `include "/usr/share/nano/*.nanorc"`, add the following.
-    # TOML
-    include "/usr/share/nano/toml.nanorc"
+```nanorc
+# TOML
+include "/usr/share/nano/toml.nanorc"
+```
 4. Enjoy.
 
 # Features
